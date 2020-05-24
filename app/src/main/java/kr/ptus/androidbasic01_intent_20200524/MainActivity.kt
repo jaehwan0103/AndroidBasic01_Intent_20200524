@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         goTOFirstBtn.setOnClickListener {
-        val myIntent = Intent(this, FirstActivity::class.java)
+            val myIntent = Intent(this, FirstActivity::class.java)
             startActivity(myIntent)
         }
 
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
             val myIntent = Intent(this, thirdActivity::class.java)
             myIntent.putExtra("content", inputContent)
-            myIntent.putExtra("number",10);
+            myIntent.putExtra("number", 10);
             startActivity(myIntent)
         }
 
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         editNickNameBtn.setOnClickListener {
-            val myIntent = Intent(this, editNickNameBtn::class.java)
+            val myIntent = Intent(this, EditeNickNameActivity::class.java)
             startActivityForResult(myIntent, REQ_FOR_NICKNAME)
 
         }
@@ -61,10 +61,10 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == REQ_FOR_NICKNAME){
-            if (resultCode == Activity.RESULT_OK){
+        if (requestCode == REQ_FOR_NICKNAME) {
+            if (resultCode == Activity.RESULT_OK) {
                 val newNickName = data?.getStringExtra("nick")
-                nickNameTxt.text= newNickName
+                nickNameTxt.text = newNickName
             }
         }
 
