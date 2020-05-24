@@ -14,7 +14,7 @@ class FourthActivity : AppCompatActivity() {
 
         val myPhoneNumber = intent.getStringExtra("phone")
 
-        phoneTxt.text = phone
+        phoneTxt.text = myPhoneNumber
 
 
 
