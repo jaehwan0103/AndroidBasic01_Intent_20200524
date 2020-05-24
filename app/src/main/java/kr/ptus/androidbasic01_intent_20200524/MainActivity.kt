@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_second.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +16,14 @@ class MainActivity : AppCompatActivity() {
         val myIntent = Intent(this, FirstActivity::class.java)
             startActivity(myIntent)
         }
+
+
+        goToSecondBtn.setOnClickListener {
+            val myIntent2 = Intent(this, SecondActivity::class.java)
+
+            startActivity(myIntent2)
+        }
+
 
     }
 }
