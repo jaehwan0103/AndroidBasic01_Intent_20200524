@@ -10,6 +10,7 @@
     tools:context=".MainActivity">
 
     <Button
+        android:id="@+id/goTOFirstBtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="1번 액티비티로 이동"/>
@@ -18,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="2번 액티비티로 이동"/>
-    
+
 
 
 
