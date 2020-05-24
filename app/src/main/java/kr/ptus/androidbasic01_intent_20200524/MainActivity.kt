@@ -35,5 +35,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        goTOFourthBtn.setOnClickListener {
+
+            val inputPhoneNumber = inputPhoneEdt.text.toString()
+
+
+            val phoneIntent = Intent(this, FourthActivity::class.java)
+
+            phoneIntent.putExtra("phone", inputPhoneNumber)
+
+            startActivity(phoneIntent)
+        }
+
     }
 }
